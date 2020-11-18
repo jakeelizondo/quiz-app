@@ -9,22 +9,29 @@
 
 * {
   font-family: verdana, sans-serif;
+  color: #05386b;
+}
+
+body {
+  background-color: #5cdb95;
 }
 
 h1 {
-  margin: 30px;
+  margin: 20px;
   padding: 20px;
   text-align: center;
-  background-color: lightgray;
-  border-radius: 5px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /* main section styling */
 
 .mainPage {
-  border: 1px solid blue;
+  border-radius: 10px;
   margin: 20px;
   padding: 20px;
+  background-color: white;
+  text-align: center;
 }
 
 #startQuiz {
@@ -34,16 +41,27 @@ h1 {
 /* question section styling */
 
 .questionSection {
-  border: 1px solid blue;
+  background-color: white;
+  border-radius: 10px;
   margin: 20px;
   padding: 20px;
 }
 
+.questionSection h2 {
+  text-align: center;
+}
+
 .answerOptions {
-  border: 1px solid blue;
+  border-radius: 10px;
   margin: 20px;
   padding: 20px;
-  background-color: rgb(245, 245, 245);
+  background-color: #379683;
+}
+
+form label {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 #submitAnswer {
@@ -52,47 +70,57 @@ h1 {
 }
 
 .quizStatusSection {
-  border: 1px solid blue;
+  border-radius: 10px;
   margin: 20px;
   padding: 10px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  background-color: rgb(245, 245, 245);
+  background-color: #379683;
 }
 
 .currentQuestion {
   display: flex;
-  border: 1px solid blue;
+  border-radius: 10px;
   margin: 20px;
   padding: 20px;
   background-color: white;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
+  text-align: center;
 }
 
 .currentScore {
   display: flex;
-  border: 1px solid blue;
+  border-radius: 10px;
   margin: 20px;
   padding: 10px;
   background-color: white;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
+  text-align: center;
 }
 
 /* feedback section styling */
 
 .feedbackSectionCorrect {
-  border: 1px solid blue;
+  border-radius: 10px;
+  background-color: white;
   margin: 20px;
   padding: 20px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .feedbackSectionIncorrect {
-  border: 1px solid blue;
+  border-radius: 10px;
+  background-color: white;
   margin: 20px;
   padding: 20px;
+  font-size: 20px;
+  text-align: center;
 }
 
 #nextQuestion {
@@ -110,14 +138,26 @@ h1 {
 /* results page styling */
 
 .resultsSection {
-  border: 1px solid blue;
+  border-radius: 10px;
   margin: 20px;
   padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.resultsSection {
+  font-size: 20px;
 }
 
 .final-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(245, 245, 245);
+  border-radius: 10px;
   margin: 20px 0px;
+  height: 100px;
+  font-size: 30px;
 }
 
 #newQuiz {

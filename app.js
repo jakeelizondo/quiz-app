@@ -46,6 +46,34 @@ const store = {
       ],
       correctAnswer: 'Denis Villeneuve',
     },
+    {
+      question:
+        'What is the name of the creator of Minecraft? His actual name, not "Notch"',
+      answers: ['Michael Parkson', 'Markus Persson', 'Mark Peterson'],
+      correctAnswer: 'Markus Persson',
+    },
+    {
+      question:
+        'Complete the name of this famous video game duo: Ratchet & _____',
+      answers: ['Sprocket', 'Clank', 'Gear', 'Crank'],
+      correctAnswer: 'Clank',
+    },
+    {
+      question: 'Complete the title: The Elder Scrolls III: ______',
+      answers: ['Skyrim', 'Oblivon', 'Morrowind', 'Daggerfall', 'Texas'],
+      correctAnswer: 'Morrowind',
+    },
+    {
+      question:
+        'What is the name of the protagonist of The Kingkiller Chronicle?',
+      answers: ['Roland', 'Karsa', 'Kvothe', 'Temeraire'],
+      correctAnswer: 'Kvothe',
+    },
+    {
+      question: "What is Naruto's last name?",
+      answers: ['Uchiha', 'Namikaze', 'Uzumaki', 'Hatake', 'Haruno'],
+      correctAnswer: 'Uzumaki',
+    },
   ],
   quizStarted: false,
   questionNumber: 0,
@@ -77,6 +105,7 @@ function generateStartingPage() {
   <p>
     Ready for some trivia? Test your nerd mettle against the following questions. Topics range from movies and video games to books and board games. See how you fare and most importantly, have fun!
   </p>
+  <p>Apologies for the color scheme. Designer I am not!</p>
   <button id="startQuiz">START QUIZ</button>
 </div>`;
 }
