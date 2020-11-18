@@ -105,7 +105,6 @@ function generateStartingPage() {
   <p>
     Ready for some trivia? Test your nerd mettle against the following questions. Topics range from movies and video games to books and board games. See how you fare and most importantly, have fun!
   </p>
-  <p>Apologies for the color scheme. Designer I am not!</p>
   <button id="startQuiz">START QUIZ</button>
 </div>`;
 }
@@ -128,7 +127,6 @@ function generateQuestionPage() {
   // for the form, join array of strings and use those for input buttons
   return `
   <div class="questionSection">
-    <h2>${currentQuestion.question}</h2>
     <div class="quizStatusSection">
       <div class="currentQuestion">
         <p>You are currently on question ${store.questionNumber + 1} out of ${
@@ -141,6 +139,7 @@ function generateQuestionPage() {
   } incorrect</p>
       </div>
     </div>
+    <h2>${currentQuestion.question}</h2>
     <form class="answerOptions">
       ${answers.join('')}
       <button id="submitAnswer" class="hideButton">SUBMIT ANSWER</button>
@@ -206,7 +205,7 @@ function generateResultsPage() {
 
   if (store.score === store.questions.length) {
     return `<div class="resultsSection">
-    <h2>Holy Cannoli Batman! A perfect Score! Congrats ya huge nerd you!</h2>
+    <h2>Holy Cannoli Batman! A perfect score! Congrats ya huge nerd you!</h2>
     <p>Here are your results:</p>
     <div class="finalPercentCorrect">
     <h3>${store.score}0%</h3>
