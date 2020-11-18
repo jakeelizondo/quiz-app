@@ -121,7 +121,7 @@ function generateQuestionPage() {
   let answers = currentQuestion.answers.map((answer, index) => {
     // for each answer, return a string with the desired html for a radio button
     return `<input type="radio" id="${answer}" name="answer" value=${answer} />
-    <label for="one">${answer}</label><br />`;
+    <label for="${answer}">${answer}</label><br />`;
   });
 
   // return the question section
