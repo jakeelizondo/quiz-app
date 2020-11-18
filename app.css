@@ -117,7 +117,7 @@ form label {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 20px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 10px;
   text-align: center;
 }
 
@@ -127,20 +127,22 @@ form label {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 20px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
 }
 
 #nextQuestion {
-  margin: 20px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .wrong {
   color: red;
+  font-size: 18px;
 }
 
 .right {
   color: green;
+  font-size: 18px;
 }
 
 /* results page styling */
@@ -333,10 +335,12 @@ form label {
 
   .wrong {
     color: red;
+    font-size: 30px;
   }
 
   .right {
     color: green;
+    font-size: 30px;
   }
 
   /* results page styling */
