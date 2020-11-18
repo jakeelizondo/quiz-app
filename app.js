@@ -48,7 +48,7 @@ const store = {
     },
     {
       question:
-        'What is the name of the creator of Minecraft? His actual name, not "Notch".',
+        'What is the name of the creator of Minecraft? (His actual name, not "Notch")',
       answers: ['Michael Parkson', 'Markus Persson', 'Mark Peterson'],
       correctAnswer: 'Markus Persson',
     },
@@ -154,7 +154,7 @@ function generateGoodFeedback() {
   let currentCorrect = store.questions[store.questionNumber].correctAnswer;
   return `<div class="feedbackSectionCorrect">
   <h2 class="right">Correct!</h2>
-  <p>You were correct, great job ya nerd! The answer was indeed ${currentCorrect}</p>
+  <p>You were correct, great job ya nerd! The answer was indeed ${currentCorrect}.</p>
   <button id="nextQuestion">NEXT QUESTION</button>
 </div>`;
 }
@@ -164,7 +164,7 @@ function generateBadFeedBack() {
 
   return `<div class="feedbackSectionIncorrect">
   <h2 class="wrong">Incorrect</h2>
-  <p>You were incorrect, sorry! The answer was ${currentCorrect}</p>
+  <p>You were incorrect, sorry! The answer was ${currentCorrect}.</p>
   <button id="nextQuestion">NEXT QUESTION</button>
 </div>`;
 }
