@@ -21,6 +21,7 @@ h1 {
   padding: 20px;
   text-align: center;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   font-size: 20px;
 }
@@ -32,6 +33,7 @@ h1 {
   margin: 20px;
   padding: 20px;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   font-size: 12px;
 }
@@ -47,6 +49,7 @@ h1 {
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .questionSection h2 {
@@ -111,6 +114,7 @@ form label {
 .feedbackSectionCorrect {
   border-radius: 10px;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 20px;
   padding: 10px;
   font-size: 20px;
@@ -120,6 +124,7 @@ form label {
 .feedbackSectionIncorrect {
   border-radius: 10px;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 20px;
   padding: 10px;
   font-size: 20px;
@@ -149,6 +154,7 @@ form label {
   margin: 20px;
   padding: 20px;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   font-size: 15px;
 }
@@ -157,6 +163,7 @@ form label {
   font-size: 40px;
   border-radius: 10px;
   background-color: #379683;
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
   padding: 0px 20px;
 }
 
@@ -169,6 +176,7 @@ form label {
   justify-content: center;
   align-items: center;
   background-color: rgb(245, 245, 245);
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
   border-radius: 10px;
   margin: 20px 0px;
   padding: 5px;
@@ -178,6 +186,7 @@ form label {
 
 #newQuiz {
   margin: 20px 0px 10px 0px;
+  box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
 }
 
 /*********** STYLES FOR LARGER SCREEN SIZES **********/
@@ -197,6 +206,7 @@ form label {
     padding: 20px;
     text-align: center;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     font-size: 40px;
   }
@@ -208,6 +218,7 @@ form label {
     margin: 20px;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     font-size: 30px;
   }
@@ -224,6 +235,7 @@ form label {
 
   .questionSection {
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     margin: 20px;
     padding: 10px;
@@ -296,6 +308,7 @@ form label {
   .feedbackSectionCorrect {
     border-radius: 10px;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-top: 10px;
     padding-bottom: 30px;
     margin: 20px;
@@ -306,6 +319,7 @@ form label {
   .feedbackSectionIncorrect {
     border-radius: 10px;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-top: 10px;
     padding-bottom: 30px;
     margin: 20px;
@@ -336,6 +350,7 @@ form label {
     margin: 20px;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
     font-size: 30px;
   }
@@ -344,6 +359,7 @@ form label {
     font-size: 50px;
     border-radius: 10px;
     background-color: #379683;
+    box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
     padding: 0px 20px;
   }
 
@@ -356,6 +372,7 @@ form label {
     justify-content: center;
     align-items: center;
     background-color: rgb(245, 245, 245);
+    box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.24);
     border-radius: 10px;
     margin: 20px 0px;
     padding: 5px;
