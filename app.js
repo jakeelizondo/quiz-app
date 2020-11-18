@@ -90,16 +90,7 @@ function generateStartingPage() {
   return `<div class="mainPage">
   <h2>Take the Nerdiness Quiz!</h2>
   <p>
-    Quiz description: God help us, we're in the hands of engineers. This thing
-    comes fully loaded. AM/FM radio, reclining bucket seats, and... power
-    windows. So you two dig up, dig up dinosaurs? Life finds a way. I gave it
-    a cold? I gave it a virus. A computer virus. God help us, we're in the
-    hands of engineers. I gave it a cold? I gave it a virus. A computer virus.
-    Must go faster... go, go, go, go, go! Life finds a way. I gave it a cold?
-    I gave it a virus. A computer virus. So you two dig up, dig up dinosaurs?
-    We gotta burn the rain forest, dump toxic waste, pollute the air, and rip
-    up the OZONE! 'Cause maybe if we screw up this planet enough, they won't
-    want it anymore!
+    Ready for some trivia? Test your nerd mettle against the following questions. Topics range from movies and video games to books and board games. See how you fare and most importantly, have fun!
   </p>
   <button id="startQuiz">START QUIZ</button>
 </div>`;
