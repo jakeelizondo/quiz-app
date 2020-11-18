@@ -14,13 +14,13 @@ const store = {
     },
     {
       question:
-        'Which of the following is NOT a die commonly used to play Dungeons & Dragons 5th edition',
+        'Which of the following is NOT a die commonly used to play Dungeons & Dragons 5th edition?',
       answers: ['d8', 'd6', 'd4', 'd16'],
       correctAnswer: 'd16',
     },
     {
       question:
-        'Which of the following is the title of the latest book in The Stormlight Archive series from Brandon Sanderson',
+        'Which of the following is the title of the latest book in The Stormlight Archive series from Brandon Sanderson?',
       answers: [
         'Rhythm of War',
         'Oathbringer',
@@ -31,13 +31,13 @@ const store = {
     },
     {
       question:
-        'Which is the name of the protagonist of the original God of War video game',
+        'Which is the name of the protagonist of the original God of War video game?',
       answers: ['Ares', 'Kratos', 'Dionysus', 'Zagreus'],
       correctAnswer: 'Kratos',
     },
     {
       question:
-        'Which of the following is the director of the upcoming film adaptation of the novel Dune',
+        'Which of the following is the director of the upcoming film adaptation of the novel Dune?',
       answers: [
         'George Lucas',
         'Steven Spielberg',
@@ -48,7 +48,7 @@ const store = {
     },
     {
       question:
-        'What is the name of the creator of Minecraft? His actual name, not "Notch"',
+        'What is the name of the creator of Minecraft? His actual name, not "Notch".',
       answers: ['Michael Parkson', 'Markus Persson', 'Mark Peterson'],
       correctAnswer: 'Markus Persson',
     },
