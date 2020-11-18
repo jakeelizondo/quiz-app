@@ -78,7 +78,7 @@ form label {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  background-color: #379683;
+  background-color: #05386b;
 }
 
 .currentQuestion {
@@ -149,7 +149,7 @@ form label {
   padding: 20px;
   background-color: white;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .finalPercentCorrect {
@@ -172,7 +172,7 @@ form label {
   margin: 20px 0px;
   padding: 20px;
   height: 100px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #newQuiz {

@@ -129,12 +129,12 @@ function generateQuestionPage() {
   <div class="questionSection">
     <div class="quizStatusSection">
       <div class="currentQuestion">
-        <p>You are currently on question ${store.questionNumber + 1} out of ${
+        <p>Question ${store.questionNumber + 1} out of ${
     store.questions.length
   }</p>
       </div>
       <div class="currentScore">
-        <p>Your Current Score is ${store.score} correct, ${
+        <p>Current Score:</br> ${store.score} correct, ${
     store.questionNumber - store.score
   } incorrect</p>
       </div>
