@@ -203,7 +203,27 @@ function generateFeedbackSection(choice, answer) {
 
 function generateResultsPage() {
   // return the HTML for the quiz starting page
-  return `<div class="resultsSection">
+
+  if (store.score === store.questions.length) {
+    return `<div class="resultsSection">
+    <h2>Holy Cannoli Batman! A perfect Score! Congrats ya huge nerd you!</h2>
+    <p>Here are your results:</p>
+    <div class="finalPercentCorrect">
+    <h3>${store.score}0%</h3>
+    </div>
+    <p class="final-results">You got ${store.score} out of ${store.questions.length} questions correct. Dang, impressive.</p>
+    <p>Not content with perfection? Want to take it again? Click the button below to start a new quiz!</p>
+    <button id="newQuiz">NEW QUIZ</button>
+    </div>`;
+  } else if (store.score === 0) {
+    return `<div class="resultsSection">
+<h2>0 out of 10 huh? Well I have some movie/book/game recommendations for you then friend.</h2>
+<p>Let's not worry about displaying results, this is for fun anyway!</p>
+<p>I'm sure you can get a higher score on your next try. Want to try again? Click the button below to start a new quiz!</p>
+<button id="newQuiz">NEW QUIZ</button>
+</div>`;
+  } else {
+    return `<div class="resultsSection">
 <h2>Well done, I hope you had fun!</h2>
 <p>Here are your results:</p>
 <div class="finalPercentCorrect">
@@ -213,6 +233,7 @@ function generateResultsPage() {
 <p>Want to take it again? Click the button below to start a new quiz!</p>
 <button id="newQuiz">NEW QUIZ</button>
 </div>`;
+  }
 }
 
 // RESET QUIZ CONTENT
