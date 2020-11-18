@@ -206,6 +206,9 @@ function generateResultsPage() {
   return `<div class="resultsSection">
 <h2>Well done, I hope you had fun!</h2>
 <p>Here are your results:</p>
+<div class="finalPercentCorrect">
+<h3>${store.score}0%</h3>
+</div>
 <p class="final-results">You got ${store.score} out of ${store.questions.length} questions correct.</p>
 <p>Want to take it again? Click the button below to start a new quiz!</p>
 <button id="newQuiz">NEW QUIZ</button>

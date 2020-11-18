@@ -138,15 +138,27 @@ form label {
 /* results page styling */
 
 .resultsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
   margin: 20px;
   padding: 20px;
   background-color: white;
   text-align: center;
+  font-size: 20px;
 }
 
-.resultsSection {
-  font-size: 20px;
+.finalPercentCorrect {
+  font-size: 40px;
+  border-radius: 10px;
+  background-color: #379683;
+  padding: 0px 20px;
+}
+
+.finalPercentCorrect h3 {
+  color: white;
 }
 
 .final-results {
@@ -156,6 +168,7 @@ form label {
   background-color: rgb(245, 245, 245);
   border-radius: 10px;
   margin: 20px 0px;
+  padding: 20px;
   height: 100px;
   font-size: 30px;
 }
