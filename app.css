@@ -99,6 +99,14 @@ h1 {
   margin: 20px 0px 10px 0px;
 }
 
+.wrong {
+  color: red;
+}
+
+.right {
+  color: green;
+}
+
 /* results page styling */
 
 .resultsSection {

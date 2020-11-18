@@ -1,5 +1,5 @@
 /**
- * Example store structure
+ * store structure
  */
 'use strict';
 
@@ -64,21 +64,6 @@ function main() {
 
 $(main);
 
-/**
- *
- * Technical requirements:
- *
- * Your app should include a render() function, that regenerates the view each time the store is updated.
- * See your course material, consult your instructor, and reference the slides for more details.
- *
- * NO additional HTML elements should be added to the index.html file.
- *
- * You may add attributes (classes, ids, etc) to the existing HTML elements, or link stylesheets or additional scripts if necessary
- *
- * SEE BELOW FOR THE CATEGORIES OF THE TYPES OF FUNCTIONS YOU WILL BE CREATING 👇
- *
- */
-
 /********** TEMPLATE GENERATION FUNCTIONS **********/
 
 // These functions return HTML templates
@@ -100,8 +85,15 @@ function generateStartingPage() {
 
 function generateQuestionPage() {
   let currentQuestion = store.questions[store.questionNumber];
+
+  let answers = currentQuestion.answers.map((answer, index) => {
+    console.log(answer, index);
+    return `<input type="radio" id="${answer}" name="answer" value=${answer} />
+    <label for="one">${answer}</label><br />`;
+  });
+
   return `
-<div class="questionSection">
+  <div class="questionSection">
     <h2>${currentQuestion.question}</h2>
     <div class="quizStatusSection">
       <div class="currentQuestion">
@@ -116,48 +108,28 @@ function generateQuestionPage() {
       </div>
     </div>
     <form class="answerOptions">
-      <input type="radio" id="${
-        currentQuestion.answers[0]
-      }" name="answer" value=${currentQuestion.answers[0]} />
-      <label for="one">${currentQuestion.answers[0]}</label><br />
-
-      <input type="radio" id="${
-        currentQuestion.answers[1]
-      }" name="answer" value=${currentQuestion.answers[1]} />
-      <label for="two">${currentQuestion.answers[1]}</label><br />
-
-      <input type="radio" id=${
-        currentQuestion.answers[2]
-      } name="answer" value=${currentQuestion.answers[2]} />
-      <label for="three">${currentQuestion.answers[2]}</label><br />
-
-      <input type="radio" id="${
-        currentQuestion.answers[3]
-      }" name="answer" value=${currentQuestion.answers[3]} />
-      <label for="four">${currentQuestion.answers[3]}</label><br />
+      ${answers.join('')}
       <button id="submitAnswer" class="hideButton">SUBMIT ANSWER</button>
     </form>
-  </div>
-`;
+  </div>`;
 }
 
 // GENERATE CONTENT FOR FEEDBACK SECTION
 
 function generateGoodFeedback() {
-  console.log('good job');
   let currentCorrect = store.questions[store.questionNumber].correctAnswer;
   return `<div class="feedbackSectionCorrect">
-  <h2>Correct!</h2>
+  <h2 class="right">Correct!</h2>
   <p>You were correct, great job ya nerd! The answer was indeed ${currentCorrect}</p>
   <button id="nextQuestion">NEXT QUESTION</button>
 </div>`;
 }
 
 function generateBadFeedBack() {
-  console.log('bad job');
   let currentCorrect = store.questions[store.questionNumber].correctAnswer;
+
   return `<div class="feedbackSectionIncorrect">
-  <h2>Incorrect</h2>
+  <h2 class="wrong">Incorrect</h2>
   <p>You were incorrect, sorry! The answer was ${currentCorrect}</p>
   <button id="nextQuestion">NEXT QUESTION</button>
 </div>`;
@@ -172,17 +144,16 @@ function generateFeedbackSection(choice, answer) {
 
   // if the choice matches the answer,
   if (choice === answer) {
-    console.log('right answer');
     //set html to equal good feedback section
     feedbackHtml = generateGoodFeedback();
+
     //append good feedback section
     $('main').append(feedbackHtml);
+
     // increment question number and score
     store.questionNumber += 1;
     store.score += 1;
   } else {
-    console.log('wrong answer');
-
     //set html to insert to be bad feedback section
     feedbackHtml = generateBadFeedBack();
 
@@ -226,13 +197,14 @@ function resetQuiz() {
 function renderQuiz() {
   // set html to nothing to start
   let html = ``;
+
   // if the quiz is not started, generate main page
   if (!store.quizStarted) {
     html = generateStartingPage();
     $('main').html(html);
+
     // if quiz is started, generate question 1 html
   } else if (store.quizStarted) {
-    console.log(`the quiz has been started, inserting question`);
     html = generateQuestionPage();
     $('main').html(html);
   }
@@ -241,7 +213,6 @@ function renderQuiz() {
 // RENDER THE RESULTS PAGE
 
 function renderResultsPage() {
-  console.log(`fire results please`);
   let html = ``;
 
   // generate html for the results page
@@ -258,12 +229,8 @@ function renderResultsPage() {
 // HANDLE A CLICK ON QUIZ START
 
 function handleQuizStart() {
-  console.log('handleQuizStart is running');
-
   // listen for a click on the start quiz button
   $('main').on('click', '#startQuiz', function (event) {
-    console.log('you clicked start');
-
     // set the quiz started in the store to true
     store.quizStarted = true;
 
@@ -275,8 +242,6 @@ function handleQuizStart() {
 // HANDLE A CLICK TO SUBMIT A QUESTION
 
 function handleQuestionSubmit() {
-  console.log(`handleQuestionSubmit is running`);
-
   // listen for a click on the submit answer button
   $('main').on('click', '#submitAnswer', function (event) {
     event.preventDefault();
@@ -287,12 +252,6 @@ function handleQuestionSubmit() {
 
     // set the user choice as a variable
     let userChoice = $('input[name="answer"]:checked').attr('id');
-    console.log(`the user choice was ${userChoice}`);
-    console.log(
-      `you clicked submit answer on question ${
-        store.questionNumber + 1
-      }, you said ${userChoice} the right answer to this question is ${currentQuestionAnswer}`
-    );
 
     // generate a feedback section, passing function the user choice and right answer for this question
     generateFeedbackSection(userChoice, currentQuestionAnswer);
@@ -302,14 +261,11 @@ function handleQuestionSubmit() {
 // HANDLE A CLICK TO MOVE TO NEXT QUESTION
 
 function handleNextQuestionSubmit() {
-  console.log('handleNextQuestionSubmit is running');
-
   let storeLength = store.questions.length;
 
   // listen for a click on the next question button
   $('main').on('click', '#nextQuestion', function (event) {
     event.preventDefault();
-    console.log(`you clicked to move to the next question.`);
 
     // if we are on the last question when this is clicked then render the results page, else renderquiz
     if (store.questionNumber === storeLength) {
@@ -325,7 +281,7 @@ function handleNextQuestionSubmit() {
 function handleNewQuizReset() {
   $('main').on('click', '#newQuiz', function (event) {
     event.preventDefault();
-    console.log(`you clicked to start a new quiz`);
+
     resetQuiz();
   });
 }
