@@ -119,7 +119,12 @@ function generateQuestionPage() {
   // map each answer to a new array
   let answers = currentQuestion.answers.map((answer, index) => {
     // for each answer, return a string with the desired html for a radio button
-    return `<input type="radio" id="${answer}" name="answer" value=${answer} />
+    if (index === 0) {
+      return `<input type="radio" id="${answer}" name="answer" value=${answer} required>
+    <label for="${answer}">${answer}</label><br />`;
+    }
+
+    return `<input type="radio" id="${answer}" name="answer" value=${answer}>
     <label for="${answer}">${answer}</label><br />`;
   });
 
@@ -300,7 +305,7 @@ function handleQuizStart() {
 
 function handleQuestionSubmit() {
   // listen for a click on the submit answer button
-  $('main').on('click', '#submitAnswer', function (event) {
+  $('main').on('submit', '.answerOptions', function (event) {
     event.preventDefault();
 
     // set the right answer for the current question as a variable
