@@ -84,14 +84,19 @@ function generateStartingPage() {
 // GENERATE CONTENT FOR QUESTION PAGE
 
 function generateQuestionPage() {
+  // set current question
   let currentQuestion = store.questions[store.questionNumber];
 
+  // loop over answers array for current question
+  // map each answer to a new array
   let answers = currentQuestion.answers.map((answer, index) => {
-    console.log(answer, index);
+    // for each answer, return a string with the desired html for a radio button
     return `<input type="radio" id="${answer}" name="answer" value=${answer} />
     <label for="one">${answer}</label><br />`;
   });
 
+  // return the question section
+  // for the form, join array of strings and use those for input buttons
   return `
   <div class="questionSection">
     <h2>${currentQuestion.question}</h2>
